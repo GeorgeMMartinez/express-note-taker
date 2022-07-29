@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { uid } = require('uid');
 
-const newData = require('./db/db.json');
+let newData = require('./db/db.json');
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
