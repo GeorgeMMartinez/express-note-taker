@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express Note Taker",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +21,5 @@
   "bugs": {
     "url": "https://github.com/GeorgeMMartinez/express-note-taker/issues"
   },
-  "homepage": "https://github.com/GeorgeMMartinez/express-note-taker#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/GeorgeMMartinez/express-note-taker#readme"
 }
