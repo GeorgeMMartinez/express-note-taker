@@ -1,7 +1,7 @@
 // dependencies/node packages
 const express = require('express');
 const fs = require('fs');
-const path = require('path');
+const { path } = require('path');
 const { uid } = require('uid');
 
 const newData = require('./db/db.json');
