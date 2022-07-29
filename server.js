@@ -1,7 +1,7 @@
 // dependencies/node packages
 const express = require('express');
 const fs = require('fs');
-const { join } = require('path');
+const path = require('path');
 const { uid } = require('uid');
 
 const newData = require('./db/db.json');
@@ -12,9 +12,12 @@ app.use(express.json());
 app.use(express.static(join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.sendFile(join(__dirname, 'public', 'index.html')));
+
 app.get('/notes', (req, res) => res.sendFile(join(__dirname, 'public', 'notes.html')));
+
 app.get('/api/notes', (req, res) => res.json(newData));
-app.post('/api/notes', function (req, res) {
+
+app.post('/api/notes', (req, res) {
   let addNewNote = {
     title: req.body.title,
     text: req.body.text,
