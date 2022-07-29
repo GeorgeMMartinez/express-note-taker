@@ -17,7 +17,7 @@ app.get('/notes', (req, res) => res.sendFile(join(__dirname, 'public', 'notes.ht
 
 app.get('/api/notes', (req, res) => res.json(newData));
 
-app.post('/api/notes', (req, res) {
+app.post('/api/notes', (req, res) => {
   let addNewNote = {
     title: req.body.title,
     text: req.body.text,
