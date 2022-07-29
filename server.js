@@ -26,12 +26,12 @@ app.post('/api/notes', (req, res) => {
   })
 })
 
-app.delete('/api/notes/:id', (req, res) => {
-  noteData = noteData.filter(note => note.id != req.params.id)
-  fs.writeFile(join(__dirname, 'db', 'db.json'), JSON.stringify(noteData), err => {
-    if (err) { console.log(err) }
-    res.sendStatus(200)
-  })
-})
+// app.delete('/api/notes/:id', (req, res) => {
+//   noteData = noteData.filter(note => note.id != req.params.id)
+//   fs.writeFile(join(__dirname, 'db', 'db.json'), JSON.stringify(noteData), err => {
+//     if (err) { console.log(err) }
+//     res.sendStatus(200)
+//   })
+// })
 // port
 app.listen(process.env.PORT || 3001)
